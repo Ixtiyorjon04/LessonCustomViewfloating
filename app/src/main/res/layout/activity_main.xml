@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <uz.gita.lessoncustomview.MyCustomView
+        android:id="@+id/myCustomView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+
+        app:layout_constraintBottom_toTopOf="@id/myx"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputHeight"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:hint="Height"
+
+
+        app:layout_constraintBottom_toBottomOf="@id/myx"
+        app:layout_constraintEnd_toStartOf="@id/myx"
+        app:layout_constraintTop_toTopOf="@id/myx">
+
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <TextView
+        android:id="@+id/myx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        android:textColor="#2E3232"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@id/btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myCustomView"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/input_width"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:hint="Weight"
+        android:textColorHint="#979797"
+        app:boxStrokeColor="#006262"
+        app:layout_constraintBottom_toBottomOf="@id/myx"
+        app:layout_constraintStart_toEndOf="@id/myx"
+        app:layout_constraintTop_toTopOf="@id/myx">
+
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="183dp"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="#C1BDBD"
+        android:text="Generete"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
